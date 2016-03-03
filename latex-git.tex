@@ -6,6 +6,7 @@
 
 
 \usetheme{epstfg}
+\setbeamertemplate{note page}[compress]
 
 \title{\LaTeX\ Crash Course}
 \author{Guillermo Julián Moreno \and Pedro Valero Mejía}
@@ -56,8 +57,8 @@ Puntos fuertes:
 \end{tikzpicture}
 \end{flushright}
 \end{minipage}
-\note{
 
+\note{
 \begin{enumerate}
 \item \LaTeX\ sabe perfectamente cómo colocar imágenes, alinear párrafos, poner títulos y más. Nosotros sólo decimos qué queremos hacer, y el sistema hace el resto. Incluso tenemos referencias automáticas, \LaTeX\ las formatea él sólo.
 \item Otros editores de texto pueden poner ecuaciones matemáticas, pero las cosas se complican cuando queremos poner alguna alineada, o matrices, o... \LaTeX\ permite hacer todo eso y más.
@@ -65,7 +66,7 @@ Puntos fuertes:
 \item Se pueden desarrollar comandos propios, escribir nuestras propias ``plantillas'' de documento, y en definitiva hacer casi cualquier cosa.
 \end{enumerate}
 
-Aquí habría que comentar que esto lo hace muy buena elección para escribir documentos matemáticos, hacer prácticas (puedes tener plantillas ya hechas, y además no es difícil hacer un script que saque cosas en \LaTeX), o incluso tomar apuntes si eres tan friki como nosotros y te haces los comandos para poder escribir rápido.
+Aquí habría que comentar que esto lo hace muy buena elección para escribir documentos matemáticos, hacer prácticas (puedes tener plantillas ya hechas, y además no es difícil hacer un script que saque cosas en \LaTeX), o incluso tomar apuntes si (como nosotros) tienes los comandos para poder escribir rápido.
 }
 
 \end{frame}
@@ -73,7 +74,25 @@ Aquí habría que comentar que esto lo hace muy buena elección para escribir do
 \begin{frame}
 \frametitle{¿Cómo funciona?}
 
-...
+\LaTeX\ no es un programa como Word, es más un lenguaje de programación. Nosotros escribimos un código, entremezclando comandos y texto, y luego lo compilamos para generar un PDF.
+
+\begin{figure}[b]
+\centering
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[height = 150pt]{CodigoLatex.png}
+\end{minipage}
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[height = 150pt]{DocumentoFinal.png}
+\end{minipage}
+\end{figure}
+
+\note{Comentar las ``desventajas'' de usar un compilador: fallos de compilación, tener que hacer varias pasadas para tener todo bien (índice, referencias)... También habría que mencionar \textit{latexmk}, que hace todo esto él solito.
+
+Por supuesto, el compilador tiene ventajas, y la principal es la automatización y la rapidez. Podemos usar el editor que queramos, no hay problemas de compatibilidad...
+}
+
 \end{frame}
 
 \end{document}
