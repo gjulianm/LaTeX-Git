@@ -100,10 +100,56 @@ Y porque a todos nos gusta ver
 \end{frame}
 
 \section{¿Cómo funciona Git?}
+\begin{frame}
+\frametitle{Descripción informal}
 
+\begin{figure}[b]
+\centering
+\includegraphics[height = 150pt]{gitProcess.png}
+\end{figure}
 
-\section{¿Cómo usamos Git?}
+\note{\begin{itemize}
+\item Tenemos un proyecto en un servidor de Git. El proyecto se encuentra en el estado $A$.
+\item Antes de empezar a trabjar debemos ``bajarnos'' el estado actual del proyecto.
+\item Realizamos los cambios deseados hasta quedarnos satisfechos, llegando al estado $B$. Llega el momento de subir los cambios.
+\begin{enumerate}
+\item Cuando queremos actualizar los archivos del servidor, le decimos que el archivo que estaba en el estado $A$ queremos que pase al estado $B$.
+\item Si el estado actual en el servidor es $A$, se actualiza con la versión $B$.
+\item Si el estado actual en el servidor es otro distinto, $C$, comprueba si los camibos que implicó $C$ sobre $A$ son conflictivos con los que implica $B$. En caso afirmativo te avisa. En caso negativo, actualiza $C$ con lo que le faltase de $B$.
+\end{enumerate}
+\end{itemize}
+}
+\end{frame}
 
+\section{Comandos de Git}
+\begin{frame}
+\frametitle{Comandos principales}
+Vamos a ver los comandos más habituales en Git, aquellos que se usan \textit{constantemente} en el día a día.
+
+Estos cambios permiten llevar a cabo las acciones descritas en el apartado anterior así como descartar cambios realizados en local.
+
+No obstante, como hemos dicho al principio, Git guarda el histórico de los cambios y pueden realizarse muchísimas operaciones sobre este historial. No entraremos en ello por ahora pero es realmente interesante. \textbf{Git tiene un enorme potencial más allá de estas transparencias}
+\note{\begin{enumerate}
+\item \textbf{pull} Descarga los cambios del servidor a nuestra máquina.
+\item \textbf{add} En local considera los cambios realizados en un fichero.
+\item \textbf{commit} Prepara los cambios para ser subidos al repositorio. Permite además añadir comentarios.
+\item \textbf{push} Sube los cambios al servidor.
+\item \textbf{checkout} Descarta los cambios realizados en un fichero dejándolo en el estado en que se descargó.
+\end{enumerate}
+
+\begin{example}
+git pull
+
+git add fichero1.c include/fichero1.h
+
+git commit -m ``Pila implementada''
+
+git push
+
+git checkout fichero2.c
+\end{example}
+}
+\end{frame}
 
 \section{Creamos un repositorio}
 \end{document}
