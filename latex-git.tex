@@ -167,7 +167,7 @@ Además de todo esto, la posibilidad de desarrollar un documento e\textbf{en equ
 \note{\begin{itemize}
 \item Basta con buscar ``Latex SO'' en Google para encontrar fácilmente cómo instalarlo. Mencionar que en OS X también se puede usar \textit{texlive} a través de MacPorts / Homebrew.
 \item TeXStudio viene muy, muy bien. Sublime también está genial, sobre todo con plugins LaTeXing o LaTeXTools.
-\item Como siempre, aunque en este caso el nivel de TeX.StackExchange es incluso mejor del de StackOverflow. Cualquier problema que tengáis ya lo habrá sufrido alguien y ya estará resuelto por ahí.
+\item Como siempre, aunque en este caso el nivel de TeX.StackExchange es incluso mejor del de StackOverflow. Cualquier problema que tengáis ya lo habrá sufrido alguien y ya estará resuelto por ahí. También merece la pena mencionar \textbf{texdoc}, que tiene la documentación de los paquetes que querramos usar.
 \end{itemize}}
 \end{frame}
 
@@ -280,6 +280,9 @@ Entre los ejercicios hay alguno para personalizar cómo quedan los párrafos y l
 
 \begin{itemize}
 \item Por supuesto, también puede haber listas sin numerar.
+\begin{itemize}
+\item Y sublistas.
+\end{itemize}
 \end{itemize}
 \end{minipage}
 \hspace{10pt}
@@ -292,9 +295,14 @@ Entre los ejercicios hay alguno para personalizar cómo quedan los párrafos y l
 
 \begin{itemize}
 \item Por supuesto, también puede haber listas sin numerar.
+\begin{itemize}
+\item Y sublistas.
+\end{itemize}
 \end{itemize}
 \end{lstlisting}
 \end{minipage}
+
+\note{Se pueden anidar listas y sublistas todo lo que se quiera. \LaTeX\ se encarga de la numeración y formato de forma automática.}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -458,6 +466,8 @@ Relaciones & \inline!$\leq, \geq, \neq, \sim, \equiv, \cup, \cap$! & $\leq, \geq
 Otros & \inline!$\emptyset, \infty, \aleph$! & $\emptyset, \infty, \aleph$
 \end{tabular}
 \end{table}
+
+\note{Hay muchísimos más símbolos, estos son sólo unos ejemplos. Hay que tener cuidado con el espaciado de muchos de ellos, porque a veces no sale bien. Precisamente por eso hemos puesto los comandos ahí en la transparencia anterior.}
 
 \end{frame}
 
@@ -681,16 +691,31 @@ f(x) = 8x + 4x^2 + 35x + \\
 
 Todos los entornos tienen versiones sin asterisco, que salen numeradas (se pueden referenciar). P.ej., \textit{gather} generará varias ecuaciones numeradas que se pueden etiquetar con \inline!\label{eq:Nombre}!.
 
-\note{}
+\note{Como apunte rápido, si se quiere usar \textit{align} o similares con sólo números en una de las ecuaciones, se puede usar \texttt{nonumber}.}
 
 \end{frame}
 
-\section{¿Y qué más puedo hacer?}
+\section{Un poco más allá}
+
+\note{Antes de acabar, vamos a mencionar algunas cosas extra que se pueden hacer con \LaTeX, más que nada por si algún día os entra la duda o queréis mirar más cosas para hacer, o simplemente os aburrís.}
 
 \begin{frame}
-\frametitle{}
+\frametitle{¿Qué más se puede hacer con \LaTeX?}
 
+\begin{itemize}
+\item Presentaciones como esta, con \textbf{Beamer}.
+\item Dibujos (también en 3D) con \textbf{Tikz}.
+\item Pósters, con \textbf{beamerposter}.
+\item Libros, con la clase \textbf{book} o \textbf{memoir}.
+\item Documentos con cálculos automáticos, con \textbf{R} y \textbf{Knitr}.
+\item Partituras, con \textbf{MusicTeX}.
+\end{itemize}
 
+\note{La principal ventaja de \LaTeX\ es que, como es programable, se puede hacer prácticamente cualquier cosa, y además hacerlo de manera reutilizable. Ponemos el ejemplo de nuestros apuntes, con una clase común y comandos ya hechos.}
 \end{frame}
+
+\plain{¿Preguntas?}
+
+\note{The end. Ahora os pasamos el ejemplo para que podáis empezar a toquetear cosas.}
 
 \end{document}
