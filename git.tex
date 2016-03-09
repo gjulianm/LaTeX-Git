@@ -107,8 +107,10 @@ Y porque a todos nos gusta ver
 \centering
 \includegraphics[height = 150pt]{gitProcess.png}
 \end{figure}
+\end{frame}
 
-\note{\begin{itemize}
+\begin{frame}
+\begin{itemize}
 \item Tenemos un proyecto en un servidor de Git. El proyecto se encuentra en el estado $A$.
 \item Antes de empezar a trabjar debemos ``bajarnos'' el estado actual del proyecto.
 \item Realizamos los cambios deseados hasta quedarnos satisfechos, llegando al estado $B$. Llega el momento de subir los cambios.
@@ -118,7 +120,7 @@ Y porque a todos nos gusta ver
 \item Si el estado actual en el servidor es otro distinto, $C$, comprueba si los camibos que implicó $C$ sobre $A$ son conflictivos con los que implica $B$. En caso afirmativo te avisa. En caso negativo, actualiza $C$ con lo que le faltase de $B$.
 \end{enumerate}
 \end{itemize}
-}
+
 \end{frame}
 
 \section{Comandos de Git}
@@ -129,7 +131,10 @@ Vamos a ver los comandos más habituales en Git, aquellos que se usan \textit{co
 Estos cambios permiten llevar a cabo las acciones descritas en el apartado anterior así como descartar cambios realizados en local.
 
 No obstante, como hemos dicho al principio, Git guarda el histórico de los cambios y pueden realizarse muchísimas operaciones sobre este historial. No entraremos en ello por ahora pero es realmente interesante. \textbf{Git tiene un enorme potencial más allá de estas transparencias}
-\note{\begin{enumerate}
+\end{frame}
+
+\begin{frame}
+\begin{enumerate}
 \item \textbf{pull} Descarga los cambios del servidor a nuestra máquina.
 \item \textbf{add} En local considera los cambios realizados en un fichero.
 \item \textbf{commit} Prepara los cambios para ser subidos al repositorio. Permite además añadir comentarios.
@@ -148,7 +153,7 @@ git push
 
 git checkout fichero2.c
 \end{example}
-}
+
 \end{frame}
 
 \section{Creamos un repositorio}
